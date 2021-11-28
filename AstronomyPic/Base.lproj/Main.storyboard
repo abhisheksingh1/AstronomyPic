@@ -1,24 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Astronomy Pic Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AstronomyPicDetailViewController" customModule="AstronomyPic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="flq-b0-7hN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AstronomyPicDetailTableViewCell" rowHeight="457" id="EAB-BV-7SB" customClass="AstronomyPicDetailTableViewCell" customModule="AstronomyPic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="457"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EAB-BV-7SB" id="bXM-H0-X99">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="457"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nature" translatesAutoresizingMaskIntoConstraints="NO" id="uLD-dm-heS">
+                                                    <rect key="frame" x="0.0" y="4" width="414" height="350"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="350" id="Ydg-dh-iIc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label jghe regkhrje rge rekjhr ebjrherje jher ehjr khjrerjherhej rreh rejhre rejbhre rjhe rjher jher ber hre  rjer e" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEb-J8-OB3">
+                                                    <rect key="frame" x="12" y="358" width="390" height="95"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pEb-J8-OB3" firstAttribute="top" secondItem="uLD-dm-heS" secondAttribute="bottom" constant="4" id="IzJ-ty-edm"/>
+                                                <constraint firstAttribute="trailing" secondItem="uLD-dm-heS" secondAttribute="trailing" id="Mpd-co-PbR"/>
+                                                <constraint firstAttribute="trailing" secondItem="pEb-J8-OB3" secondAttribute="trailing" constant="12" id="Pbv-NV-ULA"/>
+                                                <constraint firstItem="uLD-dm-heS" firstAttribute="leading" secondItem="bXM-H0-X99" secondAttribute="leading" id="eEx-Yr-Pd3"/>
+                                                <constraint firstAttribute="bottom" secondItem="pEb-J8-OB3" secondAttribute="bottom" constant="4" id="rKm-1Q-XBn"/>
+                                                <constraint firstItem="uLD-dm-heS" firstAttribute="top" secondItem="bXM-H0-X99" secondAttribute="top" constant="4" id="sq9-5r-XeS"/>
+                                                <constraint firstItem="pEb-J8-OB3" firstAttribute="leading" secondItem="bXM-H0-X99" secondAttribute="leading" constant="12" id="w9e-BW-Qjk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="picImageView" destination="uLD-dm-heS" id="eTU-ms-1uD"/>
+                                            <outlet property="shortExplanationLbl" destination="pEb-J8-OB3" id="YU4-UW-UWl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Q84-C6-1Ev"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jaC-hj-vhr"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="flq-b0-7hN" secondAttribute="bottom" id="231-uv-TIE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="flq-b0-7hN" secondAttribute="trailing" id="K82-EY-aWR"/>
+                            <constraint firstItem="flq-b0-7hN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bbw-FV-LPc"/>
+                            <constraint firstItem="flq-b0-7hN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="m2E-0R-OHC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="AstronomyPicDetailTableView" destination="flq-b0-7hN" id="mvw-OE-HVK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="87.723214285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="nature" width="1280" height="1280"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
