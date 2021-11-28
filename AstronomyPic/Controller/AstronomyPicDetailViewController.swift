@@ -9,7 +9,7 @@ import UIKit
 
 class AstronomyPicDetailViewController: UIViewController {
     @IBOutlet weak var AstronomyPicDetailTableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -19,6 +19,7 @@ class AstronomyPicDetailViewController: UIViewController {
     func setupTableView() {
         self.AstronomyPicDetailTableView.estimatedRowHeight = UITableView.automaticDimension
         self.AstronomyPicDetailTableView.tableFooterView = UIView(frame: .zero)
+        
     }
 }
 
