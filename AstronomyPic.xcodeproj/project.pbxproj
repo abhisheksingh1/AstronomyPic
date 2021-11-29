@@ -18,8 +18,6 @@
 		CE3E374E2753B4B800421D37 /* AstronomyPicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E374D2753B4B800421D37 /* AstronomyPicUITests.swift */; };
 		CE3E375C2753CACB00421D37 /* AstronomyPicDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E375B2753CACB00421D37 /* AstronomyPicDetailTableViewCell.swift */; };
 		CE3E37612753E0E400421D37 /* AstronomyPicDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E37602753E0E400421D37 /* AstronomyPicDetailViewModel.swift */; };
-		CE3E37642753E19200421D37 /* PictureDetail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E37622753E19200421D37 /* PictureDetail+CoreDataClass.swift */; };
-		CE3E37652753E19200421D37 /* PictureDetail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E37632753E19200421D37 /* PictureDetail+CoreDataProperties.swift */; };
 		CE3E37722753F60400421D37 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E37712753F60400421D37 /* CoreDataStack.swift */; };
 		CE3E37752754208000421D37 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E37742754208000421D37 /* APIEnvironment.swift */; };
 		CE3E37772754208E00421D37 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E37762754208E00421D37 /* APIHandler.swift */; };
@@ -35,6 +33,8 @@
 		CE3E379127543C5200421D37 /* HeaderTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3E378F27543C5200421D37 /* HeaderTitleTableViewCell.xib */; };
 		CE3E3794275445D900421D37 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E3793275445D900421D37 /* ViewController+Extension.swift */; };
 		CE3E37982754E9D100421D37 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E37972754E9D100421D37 /* String+Extension.swift */; };
+		CE3E379B27557EEA00421D37 /* PictureDetail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E379927557EEA00421D37 /* PictureDetail+CoreDataClass.swift */; };
+		CE3E379C27557EEA00421D37 /* PictureDetail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E379A27557EEA00421D37 /* PictureDetail+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,8 +72,6 @@
 		CE3E374F2753B4B800421D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE3E375B2753CACB00421D37 /* AstronomyPicDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicDetailTableViewCell.swift; sourceTree = "<group>"; };
 		CE3E37602753E0E400421D37 /* AstronomyPicDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicDetailViewModel.swift; sourceTree = "<group>"; };
-		CE3E37622753E19200421D37 /* PictureDetail+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PictureDetail+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CE3E37632753E19200421D37 /* PictureDetail+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PictureDetail+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE3E37712753F60400421D37 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		CE3E37742754208000421D37 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
 		CE3E37762754208E00421D37 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
@@ -89,6 +87,8 @@
 		CE3E378F27543C5200421D37 /* HeaderTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTitleTableViewCell.xib; sourceTree = "<group>"; };
 		CE3E3793275445D900421D37 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		CE3E37972754E9D100421D37 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		CE3E379927557EEA00421D37 /* PictureDetail+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PictureDetail+CoreDataClass.swift"; path = "AstronomyPic/Model/PictureDetail+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE3E379A27557EEA00421D37 /* PictureDetail+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PictureDetail+CoreDataProperties.swift"; path = "AstronomyPic/Model/PictureDetail+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,8 +205,8 @@
 		CE3E376B2753E1E800421D37 /* PictureDetail */ = {
 			isa = PBXGroup;
 			children = (
-				CE3E37622753E19200421D37 /* PictureDetail+CoreDataClass.swift */,
-				CE3E37632753E19200421D37 /* PictureDetail+CoreDataProperties.swift */,
+				CE3E379927557EEA00421D37 /* PictureDetail+CoreDataClass.swift */,
+				CE3E379A27557EEA00421D37 /* PictureDetail+CoreDataProperties.swift */,
 			);
 			name = PictureDetail;
 			path = ../..;
@@ -403,19 +403,19 @@
 				CE3E377D275420C200421D37 /* RequestHandler+Extension.swift in Sources */,
 				CE3E37832754232700421D37 /* Constants.swift in Sources */,
 				CE3E372D2753B4B500421D37 /* AstronomyPicDetailViewController.swift in Sources */,
+				CE3E379C27557EEA00421D37 /* PictureDetail+CoreDataProperties.swift in Sources */,
 				CE3E379027543C5200421D37 /* HeaderTitleTableViewCell.swift in Sources */,
 				CE3E37612753E0E400421D37 /* AstronomyPicDetailViewModel.swift in Sources */,
 				CE3E377F275420CF00421D37 /* ResponseHandler+Extension.swift in Sources */,
-				CE3E37642753E19200421D37 /* PictureDetail+CoreDataClass.swift in Sources */,
 				CE3E37722753F60400421D37 /* CoreDataStack.swift in Sources */,
 				CE3E37772754208E00421D37 /* APIHandler.swift in Sources */,
-				CE3E37652753E19200421D37 /* PictureDetail+CoreDataProperties.swift in Sources */,
 				CE3E37332753B4B500421D37 /* AstronomyPic.xcdatamodeld in Sources */,
 				CE3E37982754E9D100421D37 /* String+Extension.swift in Sources */,
 				CE3E3779275420A100421D37 /* APIPath.swift in Sources */,
 				CE3E3789275424A600421D37 /* PictureDetailAPIRequestHandler.swift in Sources */,
 				CE3E375C2753CACB00421D37 /* AstronomyPicDetailTableViewCell.swift in Sources */,
 				CE3E37862754242500421D37 /* PictureDetailAPI.swift in Sources */,
+				CE3E379B27557EEA00421D37 /* PictureDetail+CoreDataClass.swift in Sources */,
 				CE3E37292753B4B500421D37 /* AppDelegate.swift in Sources */,
 				CE3E377B275420B300421D37 /* APIManager.swift in Sources */,
 				CE3E3794275445D900421D37 /* ViewController+Extension.swift in Sources */,
