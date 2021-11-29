@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 @objc(PictureDetail)
-public class PictureDetail: NSManagedObject, Decodable {
+public class PictureDetail: NSManagedObject, Codable {
     
     @NSManaged public var title: String?
     @NSManaged public var date: String?
@@ -37,7 +37,6 @@ public class PictureDetail: NSManagedObject, Decodable {
         self.title = try container.decode(String.self, forKey: .title)
         self.date = try container.decode(String.self, forKey: .date)
         self.explanation = try container.decode(String.self, forKey: .explanation)
-        self.explanation = try container.decode(String.self, forKey: .explanation)
         guard let urlString = try container.decodeIfPresent(String.self, forKey: .url) else { return }
         if let picUrl = URL(string: urlString) {
             self.url = picUrl
@@ -49,6 +48,16 @@ public class PictureDetail: NSManagedObject, Decodable {
             }
             
         }
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+
+        try container.encode(title, forKey: .title)
+        try container.encode(date, forKey: .date)
+        try container.encode(explanation, forKey: .explanation)
+        try container.encode(url, forKey: .url)
+        try container.encode(pictureImage, forKey: .pictureImage)
     }
 }
 

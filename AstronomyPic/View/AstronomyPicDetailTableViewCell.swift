@@ -10,7 +10,7 @@ import UIKit
 class AstronomyPicDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var picImageView: UIImageView!
     @IBOutlet weak var shortExplanationLbl: UILabel!
-    
+    @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
     static var identifier: String {
         return String(describing: self)
     }
@@ -25,7 +25,12 @@ class AstronomyPicDetailTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureUI() {
-        
+    func configureUI(_ picDetail: PictureDetail?) {
+        guard let picDetail = picDetail else { return }
+        imageHeightConstraint.constant = UIScreen.main.bounds.height/2
+        if let picData = picDetail.pictureImage {
+            picImageView.image = UIImage(data: picData)
+        }
+        shortExplanationLbl.text = picDetail.explanation
     }
 }
