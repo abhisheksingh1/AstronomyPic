@@ -15,22 +15,21 @@ class AstronomyPicDetailViewModel {
         setUpViewModel()
     }
     
-    func setUpViewModel() {
-        
+    fileprivate func setUpViewModel() {
         if let detail = getStoredPictureDetail(), let date = detail.date  {
             if compareDate(date1: Date(), date2: date.getFormattedDate(fromFormat: DateFormat.YearMonthDay.rawValue)) {
                 //Already API called today once
                 self.pictureDetail = detail
-                setAPIResponse(nil)
+                updateResponse(nil)
             } else  {
                 if Reachability.isConnectedToNetwork(){
-                    //Sync detail again if date is not matching
+                    //Sync detail again if Date is not matching
                     deletePicDetail(detail)
                     self.getPictureDetail()
                 } else {
                     //Phone is not connected to the internet, Show previous detail
                     self.pictureDetail = detail
-                    setAPIResponse(ServiceError(httpStatus: 12163, message: Constants.networkErrorMessageToLoadPreviousDetail))
+                    updateResponse(ServiceError(httpStatus: 12163, message: Constants.networkErrorMessageToLoadPreviousDetail))
                 }
             }
         } else {
@@ -40,11 +39,10 @@ class AstronomyPicDetailViewModel {
             } else {
                 //First Phone is not connected to the internet, Show network error message
                 self.pictureDetail = nil
-                setAPIResponse(ServiceError(httpStatus: 12163, message: Constants.networkErrorMessage))
+                updateResponse(ServiceError(httpStatus: 12163, message: Constants.networkErrorMessage))
             }
         }
-        
-        func setAPIResponse(_ error: ServiceError?) {
+        func updateResponse(_ error: ServiceError?) {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 self.apiResponse?(error)
             }

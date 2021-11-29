@@ -15,7 +15,6 @@ struct ServiceError: Error,Codable {
 extension ResponseHandler {
     fileprivate func defaultParseResponse<T: Codable>(data: Data, response: HTTPURLResponse) throws -> T {
         let jsonDecoder = JSONDecoder()
-        //jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
         if (200...299).contains(response.statusCode) {
             do {
                 //Core data
